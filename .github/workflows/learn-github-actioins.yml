@@ -1,0 +1,16 @@
+name: learn-github-actioins
+on: push
+env:
+  date: April
+jobs:
+  dump_env_to_log:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump env
+        run: echo '${{ env.date }}'
+  dump_contexts_to_log:
+    runs-on: ubuntu-latest
+    steps:
+      - name: plain_text
+        id: github_vars_step
+        run: echo '${{ vars.PLAIN }}'
