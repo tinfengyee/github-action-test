@@ -15,6 +15,6 @@ jobs:
         id: github_vars_step
         run: echo '${{ vars.PLAIN }}'
       - name: plain_text2
-        run: echo '${{ secrets.GITHUB_TOKEN }}'
+        run: echo '${{ secrets.ACCESS_TOKEN }}'
       - name: plain_text3
         run: echo '${{ toJson(secrets) }}'
