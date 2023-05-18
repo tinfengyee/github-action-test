@@ -11,6 +11,10 @@ jobs:
   dump_contexts_to_log:
     runs-on: ubuntu-latest
     steps:
-      - name: plain_text
+      - name: plain_text1
         id: github_vars_step
         run: echo '${{ vars.PLAIN }}'
+      - name: plain_text2
+        run: echo '${{ secrets.GITHUB_TOKEN }}'
+      - name: plain_text3
+        run: echo '${{ toJson(secrets) }}'
